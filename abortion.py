@@ -79,14 +79,18 @@ def abortion_sex():
     plt.plot(values, males_percentage, 'o-g')
     plt.plot(values, females_percentage, 'o-b')
     plt.legend(['males', 'females'])
+    plt.title("Response to abortion depending on sex in percentage\n")
+    plt.xlabel("Response to abortion in numeric values")
+    plt.ylabel("percentage")
+    plt.xticks(ticks=values, labels=values)
     plt.show()
     
-    return  
+    return   
 
 
 # Fehlt: test
 # Fehlt: plot beschriftung
-# Fehlt: Kommentare
+# Idee: plot mit shared x axis anstat zwei plots komplett individuell 
 # könnte man noch machen: die dfs zusammen führen als eins 
 # könnte man noch machen: age bins und nochmal alles 
 def abortion_age():
@@ -139,15 +143,19 @@ def abortion_age():
     
     # scatterplots for mean and max response
     plt.scatter(list(individual_ages), mean_values)
+    plt.title("Mean response to abortion of every age")
+    plt.xlabel("ages")
+    plt.ylabel("numeric response to abortion")
     plt.show()
     plt.scatter(list(individual_ages), max_values)
+    plt.title("Max response to abortion of every age")
+    plt.xlabel("ages")
+    plt.ylabel("numeric response to abortion")
+    plt.yticks(list(set(max_values)), list(set(max_values)) )
     plt.show()
     
-    return 
+    return  
 
-
-# Fehlt: doc
-# Fehlt: plot beschriften 
 
 def abortion_rel():
     """
@@ -201,7 +209,12 @@ def abortion_rel():
     plt.plot(values, nr_percentage, 'o-g')
     plt.plot(values, r_percentage, 'o-b')
     plt.legend(['not religious', 'religious'])
+    plt.title("Response to abortion depending on religious self assessemnt in percentage\n")
+    plt.xlabel("Response to abortion in numeric values")
+    plt.ylabel("percentage")
+    plt.xticks(ticks=values, labels=values)
     plt.show()
     
     return 
+     
     
