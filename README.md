@@ -25,3 +25,6 @@
   - Denomination: nominal (binary after change of values to christianity vs no religion)
   - Religious Assessment: norminal (ordinal as used in Allbus but after change of values to religious vs not religious it becomes a binary nominal variable)
   
+## 20.07.2022
+- helper function for percentage, mean and max response
+- rewrite abortion_sex() and abortion_rel() to use helper function
