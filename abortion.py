@@ -5,6 +5,19 @@ import matplotlib.pyplot as plt
 pd.options.mode.chained_assignment = None
 
 
+# helper function, used for abortion_sex() and abortion_rel()
+def percentage_mean_max(df, quantity):
+    """
+    doc:
+    """
+    
+    df["percentage"] = df["counts"]/quantity
+    percentage_arr = df["percentage"].to_numpy()
+    mean = df["counts"].to_numpy()@df["response to abortion"].to_numpy()/quantity
+    maxval = df["response to abortion"].to_numpy()[df["counts"].to_numpy().argmax()]
+    
+    return df,percentage_arr, mean, maxval
+
 def tidy_abortion_df():
     """
     Create dataframe with variables relevant for all hypotheses concerning abortion
@@ -35,7 +48,6 @@ def tidy_abortion_summary():
     return 
 
 
-# could still add mean and max response of males and females to summarizing df 
 # test still missing
 def abortion_sex():
     """
@@ -62,18 +74,20 @@ def abortion_sex():
     females_df = abse_group_df[:4]
     males_df = abse_group_df[4:]
     
-    # get percentage of male and female counts on response to abortion
-    males_df["percentage"] = males_df["counts"]/quantity_males
-    females_df["percentage"] = females_df["counts"]/quantity_females
-    
-    males_percentage = males_df["percentage"].to_numpy()
-    females_percentage = females_df["percentage"].to_numpy()
-    
     values = males_df["response to abortion"].to_numpy()
     
+    # use function to get percentage, mean and max values respectively 
+    females_df, females_percentage, mean_female_response, max_female_response = percentage_mean_max(females_df, quantity_females)
+    males_df, males_percentage, mean_male_response, max_male_response = percentage_mean_max(males_df, quantity_males)
+
     # add percentage to grouped df
     abse_group_df = pd.concat([females_df, males_df])
     print("\n Grouped Dataframe: \n\n",abse_group_df, "\n")
+    
+    # summary df with mean and max response
+    zipped = list(zip(set(abse_df["sex"].to_numpy()), [mean_male_response, mean_female_response], [max_male_response, max_female_response]))
+    summary_df = pd.DataFrame(zipped, columns = ["Age", "Mean Response", "Max Response"])
+    print("\nSummary:\n\n",summary_df)
     
     # line plot for response to abortion of males and females in percentage 
     plt.plot(values, males_percentage, 'o-g')
@@ -85,11 +99,10 @@ def abortion_sex():
     plt.xticks(ticks=values, labels=values)
     plt.show()
     
-    return   
+    return    
 
 
 # Fehlt: test
-# Fehlt: plot beschriftung
 # Idee: plot mit shared x axis anstat zwei plots komplett individuell 
 # könnte man noch machen: die dfs zusammen führen als eins 
 # könnte man noch machen: age bins und nochmal alles 
@@ -156,7 +169,7 @@ def abortion_age():
     
     return  
 
-
+# Fehlt: test 
 def abortion_rel():
     """
     doc:
@@ -192,18 +205,21 @@ def abortion_rel():
     nr_df = abre_group_df[:4]
     r_df = abre_group_df[4:]
     
-    # get percentage of response 
-    nr_df["percentage"] = nr_df["counts"]/quantity_nr
-    r_df["percentage"] = r_df["counts"]/quantity_r
-    
-    nr_percentage = nr_df["percentage"].to_numpy()
-    r_percentage = r_df["percentage"].to_numpy()
-    
+    # response values (1 to 4)
     values = nr_df["response to abortion"].to_numpy()
+    
+    # use function to get percentage, mean and max response respectively
+    nr_df, nr_percentage, mean_nr_response, max_nr_response = percentage_mean_max(nr_df, quantity_nr)
+    r_df, r_percentage, mean_r_response, max_r_response = percentage_mean_max(r_df, quantity_r)
     
     # add percentage to grouped df
     abre_group_df = pd.concat([nr_df, r_df])
     print("\nGrouped Dataframe:\n\n",abre_group_df)
+    
+    # summray df with mean and max repsonse
+    zipped = list(zip(set(abre_df["religious assessment"].to_numpy()), [mean_r_response, mean_nr_response], [max_r_response, max_nr_response]))
+    summary_df = pd.DataFrame(zipped, columns = ["Religiousness", "Mean Response", "Max Response"])
+    print("\nSummary:\n\n",summary_df)
     
     # line plot 
     plt.plot(values, nr_percentage, 'o-g')
@@ -216,5 +232,6 @@ def abortion_rel():
     plt.show()
     
     return 
+     
      
     
