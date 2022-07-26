@@ -5,9 +5,9 @@
 - Dataset from ALLBUS 2018 - Gesis Variable Report - "Allgemeine Bevölkerungsumfrage der Sozialwissenschaften"
 - Abortion Hypotheses:
   - Relation between response to abortion:
-    - age
-    - sex
-    - religiousness
+    - age (ordinal vs. metric) -> Pearson correlation or Kendall rank correlation
+    - sex (ordinal vs. binary nominal) -> point biseral correlation
+    - religiousness with christianity as denomination (ordinal vs. binary nominal) -> point biseral correlation
 
 
 ## (until) 19.07.2022
@@ -24,6 +24,7 @@
   - Response to Abortion: ordinal
   - Denomination: nominal (binary after change of values to christianity vs no religion)
   - Religious Assessment: norminal (ordinal as used in Allbus but after change of values to religious vs not religious it becomes a binary nominal variable)
+
   
 ## 20.07.2022
 - helper function for percentage, mean and max response
