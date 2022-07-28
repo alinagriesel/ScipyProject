@@ -2,17 +2,18 @@
 
 ## Overview:
 
-Section I: 	Project idea and structure
-Section II: 	Requirements
-Section III: 	General information on dataset
-Section IV: 	Explanation of relevant variables and corresponding hypotheses
-Section V: 	Instructions for the use of our code 
-Section VI: 	Interpretation of Outputs / Hypotheses testings
+- Section I: 	Project idea and structure
+- Section II: 	Requirements
+- Section III: 	General information on dataset
+- Section IV: 	Explanation of relevant variables and corresponding hypotheses
+- Section V: 	Instructions for the use of our code 
+- Section VI: 	Interpretation of Outputs / Hypotheses testings
+- Reference
 
 
 ## Section I: Project idea and structure
 
-This project is a data analysis mainly comprising 3 different hypotheses, all of which however revolve around the topic of abortion. In preparation for the project, we were looking for an interesting dataset to work with after settling on the idea to conduct a data analysis. We came across an open source dataset corresponding to a general public survey, conducted by the GESIS Leibniz Institute for the Social Sciences [--reference--]. The variable report was published in 2019 and contains a number of survey questions from various fields such as politics, economy, social injustices or religion. The latter one especially caught our interest as it also addresses questions regarding ones stance on abortion. Recent public and political debates in the United States give rise to the question as to what opinion the German population advocates in general and depending on different factors as will be outlined in Section IV.
+This project is a data analysis mainly comprising 3 different hypotheses, all of which however revolve around the topic of abortion. In preparation for the project, we were looking for an interesting dataset to work with after settling on the idea to conduct a data analysis. We came across an open source dataset corresponding to a general public survey, conducted by the GESIS Leibniz Institute for the Social Sciences (Diekmann et al., 2019). The variable report was published in 2019 and contains a number of survey questions from various fields such as politics, economy, social injustices or religion. The latter one especially caught our interest as it also addresses questions regarding ones stance on abortion. Recent public and political debates in the United States give rise to the question as to what opinion the German population advocates in general and depending on different factors as will be outlined in Section IV.
 Our analysis can roughly be structured into preprocessing of data through data-wrangling, plotting for data visualisation, and applying appropriate statistical correlation testings to prepared data. Overall, we have decided on three hypotheses for which we finally present and interpret the results.
 
 
@@ -63,4 +64,11 @@ Finally, we are interested in the role of religiousness when it comes to stances
 
 ## Section VI: Interpretation of Outputs / Hypotheses testings
     • since age does not matter, we excluded the alternative explanation of religious people are usually older.
+    
+    
+    
+    
+    
+## Reference
+Diekmann, A., Hadjar, A., Kurz, K., Rosar, U., Wagner, U., Westle, B., & Kantar Public, M. (2019). Allgemeine Bevölkerungsumfrage der Sozialwissenschaften ALLBUS 2018. GESIS - Leibniz-Institut für Sozialwissenschaften. Retrieved from https://search.gesis.org/research_data/ZA5270?doi=10.4232/1.13250
 
