@@ -31,7 +31,7 @@ In total, 3477 people participated in the study. However, not all participants g
 
 ## Section IV: Explanation of relevant variables and corresponding hypotheses
 
-            ### Variables
+            Variables
 ###J005 – abortion at low income
 The main question we want to raise seeks for an overall picture on how bad Germans regard an abortion, given that the family only possesses a low income which would not suffice to raise a child. This question corresponds to the variable J005 – abortion at low income. The response possibilities that are of interest to us are ‘always bad’, ‘nearly always bad’, ‘only sometimes bad’ and ‘never bad’, with the numeric references from 1 to 4 respectively within the dataset, adding up to 1575 relevant responses. Negative response numbers represent answers such as ‘not specified’ or ‘no participation’ which we therefore exclude during data wrangling
 The hypotheses test this variable against 3 other variables, namely age, sex and religiousness (conditioned on denomination (rd01) prior to hypothesis testing). Age and sex are two of only a few variable names which are used as they are within the dataset.
@@ -47,7 +47,7 @@ The variable J029 in the dataset, which we changed to religiousness, denotes the
 Since we are only interested in whether religion plays a role, we have merged the response possibilities to two binary responses wherein 1-3 represent ‘religious’ (616 participants) and 5-7 represent ‘not religious’ (845 participants). Furthermore, we have excluded response possibility 4, as it denotes ‘neither religious nor not religious which would not be suitable for either aspect of our binary category. We have also excluded all negative response numbers as they refer to e.g. ‘not specified’ or ‘no participation’.
 In addition to this, we are only interested in people who are most likely Christian in order to not confuse different religious and their possibly opposing ideologies. We therefore used another variable, namely rd01 – denomination, in order to further exclude all people who are religious but do not have Christianity as their denomination. Thus, our final religiousness variable comprises two response possibilities, either (Christian) religious or not religious.
 
-            ### Hypotheses
+            Hypotheses
 ### Hypothesis 1
 First of all, we want to know whether there are significant differences in the response to abortion among different age groups. Since the response to abortion is an ordinal variable and age a metric one, we can either use the Pearson Correlation test (parametric) or the Kendall Rank Correlation test (non-parametric). The former should only be applied if we know that the relevant variables follow a normal distribution as this is pre-assumed by the test. We therefore checked the distribution of the age data points using the Shapiro-Wilk test. Although age usually follows a normal distribution, it does not do so in our case, perhaps due to the low amount of participants or other biases influencing which people end up as participants. We therefore choose the Kendall Rank Correlation test.
 
