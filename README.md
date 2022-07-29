@@ -62,7 +62,7 @@ Finally, we are interested in the role of religiousness when it comes to stances
 ## Section IV: Requirements and table of files
 
 ### Requirements
-In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few librarys required. You can install all at once with the use of the provided `requirements.txt` file and a command like:
+In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few packages required. You can install all at once with the use of the provided `requirements.txt` file and a command like:
 
     pip install -r requirements.txt
 
@@ -86,6 +86,13 @@ In order to execute our code, there are a few things you need to have installed 
 
 
 ## Section V: Instructions for the use of our code 
+
+After installing python and all necessary packages, you can choose which hypothesis you would like to look at and run e.g. the following command with the corresponding hypothesis py file:
+
+    python Hypothesis1.py
+
+"Hypothesis1" can therein be exchanged by any py file you would like to execute. We would recommend you run the `Overview.py` file in order to gain some feeling for the variables and responses.
+    
 
 
 ## Section VI: Interpretation of Outputs / Hypotheses testings
