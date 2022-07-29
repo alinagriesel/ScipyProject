@@ -92,10 +92,19 @@ After installing python and all necessary packages, you can choose which hypothe
     python Hypothesis1.py
 
 "Hypothesis1" can therein be exchanged by any py file you would like to execute. We would recommend you run the `Overview.py` file in order to gain some feeling for the variables and responses.
-    
+The following Section includes our interpretation of the correlation tests. Feel free to read through it while having the graphs and test results open.
 
 
 ## Section VI: Interpretation of Outputs / Hypotheses testings
+
+`Hypothesis 1 - Response to abortion vs age - Interpretation`
+
+
+`Hypothesis 2 - Response to abortion vs sex - Interpretation`
+
+
+`Hypothesis 3 - Response to abortion vs religiousness - Interpretation`
+
     • since age does not matter, we excluded the alternative explanation of religious people are usually older.
     
     
