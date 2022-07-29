@@ -48,11 +48,11 @@ In addition to this, we are only interested in people who are most likely Christ
 ### Hypotheses
 `Hypothesis 1`
 
-First of all, we want to know whether there are significant differences in the response to abortion among different age groups. Since the response to abortion is an ordinal variable and age a metric one, we can either use the Pearson Correlation test (parametric) or the Kendall Rank Correlation test (non-parametric). The former should only be applied if we know that the relevant variables follow a normal distribution as this is pre-assumed by the test. We therefore checked the distribution of the age data points using the Shapiro-Wilk test. Although age usually follows a normal distribution, it does not do so in our case, perhaps due to the low amount of participants or other biases influencing which people end up as participants. We therefore choose the Kendall Rank Correlation test.
+First of all, we want to know whether there are significant differences in the response to abortion among different age groups. Since the response to abortion is an ordinal variable and age a metric one, we can either use the Pearson Correlation test (parametric) or the Kendall Tau Correlation test (non-parametric). The former should only be applied if we know that the relevant variables follow a normal distribution as this is pre-assumed by the test. We therefore checked the distribution of the age data points using the Shapiro-Wilk test. Although age usually follows a normal distribution, it does not do so in our case (further explained in Section VI), perhaps due to the low amount of participants or other biases influencing which people end up as participants. We therefore choose the Kendall Tau Correlation test.
 
 `Hypothesis 2`
 
-Secondly, we want to know whether the responses to abortion vary between the two sexes. Since response to abortion is an ordinal variable and the sex is a binary nominal one, we cannot use the Kendall Rank Correlation test, nor the Pearson Correlation test. In order to account for a binary nominal variable, we make use of the Point Biseral Correlation test.
+Secondly, we want to know whether the responses to abortion vary between the two sexes. Since response to abortion is an ordinal variable and the sex is a binary nominal one, we cannot use the Kendall Tau Correlation test, nor the Pearson Correlation test. In order to account for a binary nominal variable, we make use of the Point Biseral Correlation test.
 
 `Hypothesis 3`
 
@@ -97,20 +97,30 @@ The following Section includes our interpretation of the correlation tests. Feel
 
 ## Section VI: Interpretation of Outputs / Hypotheses testings
 
+Results of Correlation Tests provide a Correlation Coefficient which is a value representing the effect size, ranging from -1 to 1 wherein -1 refers to a perfect negative correlation, i.e. as Variable1 increases, Variable2 decreases, 0 refers to no detectable correlation and 1 is a perfect positive correlation, i.e. if Variable1 increases, Variable2 does so as well. There are different ways of interpreting the values between these extremes but we will focus on a general coefficient analysis which declares 0.2-0.4, 0.4-0.6 and above 0.6 to be a weak, moderate or strong correlation respectively. (Dixon, 2021)
+
+
 `Hypothesis 1 - Response to abortion vs age - Interpretation`
+
+In order to determine which correlation test to use in this case, as mentioned above, we conducted the Shapiro-Wilk Test to check whether `age` is normally distributed. The test Statistic has a value of ~0.98 and a P-value of ~1.83e^-14. Both values indicate that we can very likely reject the null hypothesis, meaning, we cannot assume a normal distribution and should rather use a non-parametric correlation test such as the Kendall Tau Correlation test.
+This test results in a correlation coefficient of ~0.008 which is very small and stands for basically no detectable correlation. The p-value of ~0.66 also does not support a significant result if one takes 0.05 as the significance threshold, as usually done.
+Thus, there is no evidence for a correlation between responses to abortion and age. After creating the scatterplot, we have already expected to find no correlation as all data points are evenly, horizontally distributed.
 
 
 `Hypothesis 2 - Response to abortion vs sex - Interpretation`
 
+For the second hypothesis we used the Point-Biseral Correlation Test. Its Correlation Coeffcient results in ~-0.025 which again, does not speak in favour of a correlation. Similarly, the p-value of ~0.32 is also no indication of a significant correlation. The hypothesis that sex plays a role in responses to abortion can therefore also be rejected. This is also to no surprise after plotting the data as the plot-lines for females and males behave very similar.
+
 
 `Hypothesis 3 - Response to abortion vs religiousness - Interpretation`
 
-    • since age does not matter, we excluded the alternative explanation of religious people are usually older.
-    
-    
-    
-    
+For the last hypothesis we also used the Point-Biseral Correlation Test. Contrary to the former hypotheses, the Coefficient ~-0.27 shows some weak correlation between religiousness and responses to abortion. Note the negative sign which speaks for a weak negative correlation. Besides this and also contrary to the former two hypothesis results, the p-value is highly significant with a value of ~2.76e^-22. Therefore, we can accept the hypothesis that there is a weak correlation between responses to abortion and whether someone is (Christian) religious or not.
+Considering this result in combination with the scatter plot we have created,(Christian) Religious people seem a bit more likely to militate against abortion. Keep in mind that "response to abortion" is conditioned on the fact that the family only has low income and would not be able to provide for the child. Unfortunately, we do not have data for responses to abortion in general. Results may have been different or arguably more severe in this case.
+There may be one objection one could raise which suggests that older people are more likely to be religious and conservative und thus age could be a bias distorting the correlation measurement. However, since we have checked for an age-dependency in the first hypothesis, we believe this to be relevant to the current hypothesis.
+
     
 ## Reference
 Diekmann, A., Hadjar, A., Kurz, K., Rosar, U., Wagner, U., Westle, B., & Kantar Public, M. (2019). Allgemeine Bevölkerungsumfrage der Sozialwissenschaften ALLBUS 2018. GESIS - Leibniz-Institut für Sozialwissenschaften. Retrieved from https://search.gesis.org/research_data/ZA5270?doi=10.4232/1.13250
+
+Dixon, T. (2021). How to evaluate correlational studies....PROPERLY! | IB Psychology. IB Psychology. Retrieved 29 July 2022, from https://www.themantic-education.com/ibpsych/2021/02/25/how-to-evaluate-correlational-studies-properly/.
 
