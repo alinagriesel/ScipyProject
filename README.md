@@ -69,7 +69,7 @@ In order to execute our code, there are a few things you need to have installed 
 
 ### Table of files
 
-- folder `data` contains:
+- `data` folder contains:
     -  ZA5272_v1-0-0.dta (data set as we have downloaded it from GESIS Website
     -  data.csv (which we do not use but which some may prefer to work with)
     -  data.dta (which we are working with in our code)
@@ -77,27 +77,27 @@ In order to execute our code, there are a few things you need to have installed 
 - `requirements.txt`
 
 - `Functions.py` (contains 4 functions which are used by other py files but which does not give any output to the user)
-- `Overwiev.py` (tidy data frame, summary statistic, histogram for each individual variable, number of participants for each hypothesis)
-- `Hypothesis1.py` (response to abortionn - age)
-- `Hypothesis2.py` (response to abortionn - sex)
-- `Hypothesis3.py` (response to abortionn - religiousness)
+- `Overview.py` (tidy data frame, summary statistic, histogram for each individual variable, number of participants for each hypothesis)
+- `Hypothesis1.py` (response to abortion - age)
+- `Hypothesis2.py` (response to abortion - sex)
+- `Hypothesis3.py` (response to abortion - religiousness)
 
 - `test_notebook` (during the development of the code, we have worked with a notebook for convenience. Feel free to check it out and run individual codes in cells as you like)
 
 
 ## Section V: Instructions for the use of our code 
 
-After installing python and all necessary packages, you can choose which hypothesis you would like to look at and run e.g. the following command with the corresponding hypothesis py file:
+After installing python and all necessary packages, you can choose which hypothesis you would like to look at and run e.g. the following command in your console with the corresponding hypothesis py file:
 
     python Hypothesis1.py
 
-"Hypothesis1" can therein be exchanged by any py file you would like to execute. We would recommend you run the `Overview.py` file in order to gain some feeling for the variables and responses.
+"Hypothesis1" can therein be exchanged by any py file you would like to execute. We would recommend you run the `Overview.py` file first in order to gain some feeling for the variables and responses.
 The following Section includes our interpretation of the correlation tests. Feel free to read through it while having the graphs and test results open.
 
 
 ## Section VI: Interpretation of Outputs / Hypotheses testings
 
-Results of Correlation Tests provide a Correlation Coefficient which is a value representing the effect size, ranging from -1 to 1 wherein -1 refers to a perfect negative correlation, i.e. as Variable1 increases, Variable2 decreases, 0 refers to no detectable correlation and 1 is a perfect positive correlation, i.e. if Variable1 increases, Variable2 does so as well. There are different ways of interpreting the values between these extremes but we will focus on a general coefficient analysis which declares 0.2-0.4, 0.4-0.6 and above 0.6 to be a weak, moderate or strong correlation respectively. (Dixon, 2021)
+Results of Correlation Tests provide a Correlation Coefficient which is a value representing the effect size, ranging from -1 to 1 wherein -1 refers to a perfect negative correlation, i.e. as Variable A increases, Variable B decreases, 0 refers to no detectable correlation and 1 is a perfect positive correlation, i.e. if Variable A increases, Variable B does so as well. There are different ways of interpreting the values between these extremes but we will focus on a general coefficient analysis which declares 0.2-0.4, 0.4-0.6 and above 0.6 to be a weak, moderate or strong correlation respectively. (Dixon, 2021)
 
 
 `Hypothesis 1 - Response to abortion vs age - Interpretation`
@@ -119,7 +119,7 @@ Considering this result in combination with the scatter plot we have created,(Ch
 There may be one objection one could raise which suggests that older people are more likely to be religious and conservative und thus age could be a bias distorting the correlation measurement. However, since we have checked for an age-dependency in the first hypothesis, we believe this to be relevant to the current hypothesis.
 
     
-## Reference
+## References
 Diekmann, A., Hadjar, A., Kurz, K., Rosar, U., Wagner, U., Westle, B., & Kantar Public, M. (2019). Allgemeine Bevölkerungsumfrage der Sozialwissenschaften ALLBUS 2018. GESIS - Leibniz-Institut für Sozialwissenschaften. Retrieved from https://search.gesis.org/research_data/ZA5270?doi=10.4232/1.13250
 
 Dixon, T. (2021). How to evaluate correlational studies....PROPERLY! | IB Psychology. IB Psychology. Retrieved 29 July 2022, from https://www.themantic-education.com/ibpsych/2021/02/25/how-to-evaluate-correlational-studies-properly/.
