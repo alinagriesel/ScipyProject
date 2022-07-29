@@ -13,7 +13,7 @@
 
 ## Section I: Project idea and structure
 
-This project is a data analysis mainly comprising 3 different hypotheses, all of which however revolve around the topic of abortion. In preparation for the project, we were looking for an interesting dataset to work with after settling on the idea to conduct a data analysis. We came across an open source dataset corresponding to a general public survey, conducted by the GESIS Leibniz Institute for the Social Sciences (Diekmann et al., 2019). The variable report was published in 2019 and contains a number of survey questions from various fields such as politics, economy, social injustices or religion. The latter one especially caught our interest as it also addresses questions regarding ones stance on abortion. Recent public and political debates in the United States give rise to the question as to what opinion the German population advocates in general and depending on different factors as will be outlined in Section IV.
+This project is a data analysis mainly comprising 3 different hypotheses, all of which however revolve around the topic of abortion. In preparation for the project, we were looking for an interesting dataset to work with after settling on the idea to conduct a data analysis. We came across an open source dataset corresponding to a general public survey, conducted by the GESIS Leibniz Institute for the Social Sciences (Diekmann et al., 2019). The variable report was published in 2019 and contains a number of survey questions from various fields such as politics, economy, social injustices or religion. The latter one especially caught our interest as it also addresses questions regarding ones stance on abortion. Recent public and political debates in the United States give rise to the question as to what opinion the German population advocates in general and depending on different factors as will be outlined in Section III.
 Our analysis can roughly be structured into preprocessing of data through data-wrangling, plotting for data visualisation, and applying appropriate statistical correlation testings to prepared data. Overall, we have decided on three hypotheses for which we finally present and interpret the results.
 
 
@@ -55,7 +55,7 @@ Finally, we are interested in the role of religiousness when it comes to stances
 ## Section IV: Requirements and table of files
 
 ### Requirements
-In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few librarys required. You can install all at once with the use of the provided "requirements.txt" file and a command like #pip install -r requirements.txt#.
+In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few librarys required. You can install all at once with the use of the provided *requirements.txt* file and a command like `pip install -r requirements.txt`.
 
 
 ### Table of files
