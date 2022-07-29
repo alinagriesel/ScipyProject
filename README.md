@@ -55,7 +55,8 @@ Finally, we are interested in the role of religiousness when it comes to stances
 ## Section IV: Requirements and table of files
 
 ### Requirements
-In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few librarys required. You can install all at once with the use of the provided *requirements.txt* file and a command like `pip install -r requirements.txt`.
+In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few librarys required. You can install all at once with the use of the provided `requirements.txt` file and a command like:
+    pip install -r requirements.txt
 
 
 ### Table of files
