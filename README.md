@@ -26,17 +26,17 @@ In total, 3477 people participated in the study. However, not all participants g
 ## Section III: Explanation of relevant variables and corresponding hypotheses
 
 ### Variables
-    J005 – abortion at low income
+`J005 – abortion at low income`
 The main question we want to raise seeks for an overall picture on how bad Germans regard an abortion, given that the family only possesses a low income which would not suffice to raise a child. This question corresponds to the variable J005 – abortion at low income. The response possibilities that are of interest to us are ‘always bad’, ‘nearly always bad’, ‘only sometimes bad’ and ‘never bad’, with the numeric references from 1 to 4 respectively within the dataset, adding up to 1575 relevant responses. Negative response numbers represent answers such as ‘not specified’ or ‘no participation’ which we therefore exclude during data wrangling
 The hypotheses test this variable against 3 other variables, namely age, sex and religiousness (conditioned on denomination (rd01) prior to hypothesis testing). Age and sex are two of only a few variable names which are used as they are within the dataset.
 
-    age
+`age`
 The data points for age have been generated using the year of birth as indicated by the participants. Negative response numbers refer to cases in which the age could not be generated and which we therefore exclude during data wrangling. There is a total of 3472 data points for age.
 
-    sex
+`sex`
 The variable sex only differentiates between the responses ‘male’ and ‘female’, 1 and 2 respectively in the dataset. It is important to mention here, that the interviewer themselves were responsible to fill out this point for each participant without asking them. No other sex category was included and thus all 3477 participants were assigned either male or female. We believe this to be critical and suggest that one should look at correlation tests with caution. Nevertheless, we believe it is sufficient to provide some indication for possible sex differences. Altogether, 1777 participants were assigned to be male and 1700 participants were assigned to be female. The proportion between the two sexes is therefore quite even.
 
-    religiousness
+`religiousness`
 The variable J029 in the dataset, which we changed to religiousness, denotes the participant’s personal assessment of how religious they are. The response possibilities are (1)‘deeply religious’, (2)‘very religious’, (3)‘rather religious’, (5)‘rather not religious’, (6)‘not religious’ and (7)‘not religious at all’. The numbers in parentheses refer to the numeric reference within the dataset.
 Since we are only interested in whether religion plays a role, we have merged the response possibilities to two binary responses wherein 1-3 represent ‘religious’ (616 participants) and 5-7 represent ‘not religious’ (845 participants). Furthermore, we have excluded response possibility 4, as it denotes ‘neither religious nor not religious which would not be suitable for either aspect of our binary category. We have also excluded all negative response numbers as they refer to e.g. ‘not specified’ or ‘no participation’.
 In addition to this, we are only interested in people who are most likely Christian in order to not confuse different religious and their possibly opposing ideologies. We therefore used another variable, namely rd01 – denomination, in order to further exclude all people who are religious but do not have Christianity as their denomination. Thus, our final religiousness variable comprises two response possibilities, either (Christian) religious or not religious.
