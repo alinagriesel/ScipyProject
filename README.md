@@ -102,7 +102,7 @@ Results of Correlation Tests provide a Correlation Coefficient which is a value 
 
 `Hypothesis 1 - Response to abortion vs age - Interpretation`
 
-In order to determine which correlation test to use in this case, as mentioned above, we conducted the Shapiro-Wilk Test to check whether `age` is normally distributed. The test Statistic has a value of ~0.98 and a P-value of ~1.83e^-14. Both values indicate that we can very likely reject the null hypothesis, meaning, we cannot assume a normal distribution and should rather use a non-parametric correlation test such as the Kendall Tau Correlation test.
+In order to determine which correlation test to use in this case, as mentioned above, we conducted the Shapiro-Wilk Test to check whether age is normally distributed. The test Statistic has a value of ~0.98 and a P-value of ~1.83e^-14. Both values indicate that we can very likely reject the null hypothesis, meaning, we cannot assume a normal distribution and should rather use a non-parametric correlation test such as the Kendall Tau Correlation test.
 This test results in a correlation coefficient of ~0.008 which is very small and stands for basically no detectable correlation. The p-value of ~0.66 also does not support a significant result if one takes 0.05 as the significance threshold, as usually done.
 Thus, there is no evidence for a correlation between responses to abortion and age. After creating the scatterplot, we have already expected to find no correlation as all data points are evenly, horizontally distributed.
 
