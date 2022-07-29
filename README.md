@@ -17,20 +17,13 @@ This project is a data analysis mainly comprising 3 different hypotheses, all of
 Our analysis can roughly be structured into preprocessing of data through data-wrangling, plotting for data visualisation, and applying appropriate statistical correlation testings to prepared data. Overall, we have decided on three hypotheses for which we finally present and interpret the results.
 
 
-## Section II: Requirements and table of files
-
-    • libraries
-    • python version
-    • jupyter notebook
-
-
-## Section III: General information on dataset
+## Section II: General information on dataset
 
 As briefly touched upon above, the dataset represents the participant’s responses to a large number of different questions. Each question functions as a variable, thus occupying one column respectively, and represented by a short reference code within the dataset. The responses also follow a specific schemata which uses numeric values to refer to response possibilities which are further clarified in the ALLBUS Variable Report published alongside the dataset. This report provides a thorough and extensive explanation for every single variable/question and their respective response possibilities. After each explanation, a short summary statistics provides some general information on e.g. count and percentage corresponding to each response possibility.
 In total, 3477 people participated in the study. However, not all participants gave responses to every question. Since we focus on the particular topic of abortion, the participant count for each variable varies between 1259 and 1570.
 
 
-## Section IV: Explanation of relevant variables and corresponding hypotheses
+## Section III: Explanation of relevant variables and corresponding hypotheses
 
 ### Variables
     J005 – abortion at low income
@@ -58,6 +51,19 @@ Secondly, we want to know whether the responses to abortion vary between the two
     Hypothesis 3
 Finally, we are interested in the role of religiousness when it comes to stances on abortion, whether (Christian) religious people tend to give different responses to abortion than non religious people. After the changes to the response possibilities which we have made earlier, depending on the participant’s denomination, we are left with a binary nominal variable. Therefore, as in H2, we will use the Point Biseral Correlation test again.
 
+
+## Section IV: Requirements and table of files
+
+### Requirements
+In order to execute our code, there are a few things you need to have installed and prepared. First of all, we have worked with Python 3.10.4 so this version should definitely work. Next, there are a few librarys required. You can install all at once with the use of the provided *requirements.txt* file and a command like *pip install -r requirements.txt*.
+
+
+### Table of files
+
+
+    • libraries
+    • python version
+    • jupyter notebook
 
 ## Section V: Instructions for the use of our code 
 
