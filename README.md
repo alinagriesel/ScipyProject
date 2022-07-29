@@ -69,10 +69,21 @@ In order to execute our code, there are a few things you need to have installed 
 
 ### Table of files
 
+- folder `data` contains:
+    -  ZA5272_v1-0-0.dta (data set as we have downloaded it from GESIS Website
+    -  data.csv (which we do not use but which some may prefer to work with)
+    -  data.dta (which we are working with in our code)
+- `README.md`
+- `requirements.txt`
 
-    • libraries
-    • python version
-    • jupyter notebook
+- `Functions.py` (contains 4 functions which are used by other py files but which does not give any output to the user)
+- `Overwiev.py` (tidy data frame, summary statistic, histogram for each individual variable, number of participants for each hypothesis)
+- `Hypothesis1.py` (response to abortionn - age)
+- `Hypothesis2.py` (response to abortionn - sex)
+- `Hypothesis3.py` (response to abortionn - religiousness)
+
+- `test_notebook` (during the development of the code, we have worked with a notebook for convenience. Feel free to check it out and run individual codes in cells as you like)
+
 
 ## Section V: Instructions for the use of our code 
 
