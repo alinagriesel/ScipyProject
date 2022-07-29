@@ -47,12 +47,15 @@ In addition to this, we are only interested in people who are most likely Christ
 
 ### Hypotheses
 `Hypothesis 1`
+
 First of all, we want to know whether there are significant differences in the response to abortion among different age groups. Since the response to abortion is an ordinal variable and age a metric one, we can either use the Pearson Correlation test (parametric) or the Kendall Rank Correlation test (non-parametric). The former should only be applied if we know that the relevant variables follow a normal distribution as this is pre-assumed by the test. We therefore checked the distribution of the age data points using the Shapiro-Wilk test. Although age usually follows a normal distribution, it does not do so in our case, perhaps due to the low amount of participants or other biases influencing which people end up as participants. We therefore choose the Kendall Rank Correlation test.
 
 `Hypothesis 2`
+
 Secondly, we want to know whether the responses to abortion vary between the two sexes. Since response to abortion is an ordinal variable and the sex is a binary nominal one, we cannot use the Kendall Rank Correlation test, nor the Pearson Correlation test. In order to account for a binary nominal variable, we make use of the Point Biseral Correlation test.
 
 `Hypothesis 3`
+
 Finally, we are interested in the role of religiousness when it comes to stances on abortion, whether (Christian) religious people tend to give different responses to abortion than non religious people. After the changes to the response possibilities which we have made earlier, depending on the participant’s denomination, we are left with a binary nominal variable. Therefore, as in H2, we will use the Point Biseral Correlation test again.
 
 
