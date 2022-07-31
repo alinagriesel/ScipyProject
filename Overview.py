@@ -1,6 +1,6 @@
 from Functions import *
 
-# Overview print function
+# Overview/summary print function
 def tidy_abortion_summary():
     """
     Displays the full tidy dataframe used for all hypotheses, a summary statistic, a histogram plot for each variable and the counts of all participants per hypothesis

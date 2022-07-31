@@ -52,8 +52,7 @@ def abortion_sex():
     summary_df = pd.DataFrame(zipped, columns = ["Age", "Mean Response", "Max Response"])
     print("\n\033[4mSummary:\033[0m\n\n",summary_df)
     
-    # line plot for response to abortion of males and females in percentage 
-    
+    # scatter plot with connections between points for response to abortion of males and females in percentage 
     plot = go.Figure(data=[go.Scatter(
         name='Males',
         x=values,
