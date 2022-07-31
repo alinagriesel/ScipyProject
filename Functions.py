@@ -176,3 +176,34 @@ def participants_counts():
     print("\n\033[4m" + "Number of participants used for each hypothesis:" + "\033[0m\n\n", data_frame)
     
     return
+
+
+# Test for outlier deetction and removal, used in Hypothesis 1 for mean response as the graph for mean response indicates some outliers
+def rosner_test(arrayy, arrayx):
+    """
+    Execute Rosner Test using the z value of values in data array to determine outliers and remove them. Z values over 3 are considered outliers.
+    
+    Args:
+        arrayy (numpy array): Array of y values from which we want to determine outliers and remove them
+        arrayx (numpy array): Array containing the x values where we also need to delete the values at index where arrayy has outliers 
+        
+    Returns:
+        arrayy (numpy array): with removed outliers
+        arrayx (numyp array): with removed x values for outlier y values
+    """
+    z_max = 4
+    
+    while z_max > 3:
+        
+        std = np.std(arrayy)
+        mean = np.mean(arrayy)
+        
+        z_values = abs(arrayy-mean)/std
+        z_max = max(z_values)
+        z_max_index = z_values.argmax()
+        
+        if z_max > 3:
+            arrayy = np.delete(arrayy, z_max_index)
+            arrayx = np.delete(arrayx, z_max_index)
+            
+    return arrayy, arrayx

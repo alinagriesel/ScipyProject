@@ -58,6 +58,9 @@ def abortion_age():
         mean_values.append(inter/counter)
         max_values.append(m)
     
+    # use rosner test in case there are outliers in mean response values
+    mean_values_outlier, individual_ages_outlier = rosner_test(mean_values, list(individual_ages))
+    
     # summary df containing each age group and the mean and max response to abortion
     zipped = list(zip(individual_ages, mean_values, max_values))
     summary_df = pd.DataFrame(zipped, columns = ["Age", "Mean Response", "Max Response"])
@@ -71,6 +74,15 @@ def abortion_age():
                             },
                       title = "Mean response to abortion of every age")
     fig1.show()
+    
+    # graph for mean response without outliers 
+    fig1_2 = px.scatter(x = list(individual_ages_outlier), y = mean_values_outlier, 
+                      labels = {
+                                "x": "age",
+                                "y": "Mean response to abortion of every age"   
+                            },
+                      title = "Mean response to abortion of every age w.o. outliers")
+    fig1_2.show()
     
     fig2 = px.scatter(x = list(individual_ages), y = max_values, 
                       labels = {
