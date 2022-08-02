@@ -1,11 +1,11 @@
-# ScipyProject
+# Social Survey Data Analysis - Scipy Project
 
 ## Overview:
 
 - Section I: 	Project idea and structure
-- Section II: 	Requirements
-- Section III: 	General information on dataset
-- Section IV: 	Explanation of relevant variables and corresponding hypotheses
+- Section II: 	General information on dataset
+- Section III: 	Explanation of relevant variables and corresponding hypotheses
+- Section IV: 	Requirements and table of files
 - Section V: 	Instructions for the use of our code 
 - Section VI: 	Interpretation of Outputs / Hypotheses testings
 - Reference
