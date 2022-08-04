@@ -53,48 +53,56 @@ def abortion_sex():
     print("\n\033[4mSummary:\033[0m\n\n",summary_df)
     
     # scatter plot with connections between points for response to abortion of males and females in percentage 
-    plot = go.Figure(data=[go.Scatter(
-        name='Males',
-        x=values,
-        y=males_percentage, 
+    plot = go.Figure(data = [go.Scatter(
+        name = 'Males',
+        x = values,
+        y = males_percentage, 
     ),
         go.Scatter(
-        name='Females',
-        x=values,
-        y=females_percentage,
+        name = 'Females',
+        x = values,
+        y = females_percentage,
         line_color = "red"
     )
     ])
     
-    plot.update_xaxes(dtick=values)
-    plot.update_xaxes(title="Response to abortion in numeric values")
-    plot.update_yaxes(title="Percentage")
+    plot.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = values,
+            ticktext = ["always bad", "nearly always bad", "only sometimes bad", "never bad"],
+            title = "Response to abortion"
+        ),
+        yaxis = dict(
+            title = "Percentage"
+        )
+    )
     
     # add buttons to decide/ switch between graphs being displayed (options: both, male response, female response)
     plot.update_layout(
-        updatemenus=[
+        updatemenus = [
             
             dict(
-                type="buttons",
-                direction="left",
-                buttons=list([
+                type = "buttons",
+                direction = "left",
+                buttons = list([
                     
-                    dict(label="Both",
-                         method="update",
-                         args=[{"visible": [True, True]},
+                    dict(label = "Both",
+                         method = "update",
+                         args = [{"visible": [True, True]},
                                {"title": "Both"},
                               ]),
                                
                     
-                    dict(label="Males",
-                         method="update",
-                         args=[{"visible": [True, False]},
+                    dict(label = "Males",
+                         method = "update",
+                         args = [{"visible": [True, False]},
                                {"title": "Male response to abortion",
                                 }]),
                     
-                    dict(label="Females",
-                         method="update",
-                         args=[{"visible": [False, True]},
+                    dict(label = "Females",
+                         method = "update",
+                         args = [{"visible": [False, True]},
                                {"title": "Female response to abortion",
                                 }]),
                 ]),
@@ -110,7 +118,7 @@ def abortion_sex():
     
     correlation, pvalue = stats.pointbiserialr(sex_bool, response_arr)
     
-    print('\n\033[4m' + "Point-Biserial Correlation Test:\n\n" + '\033[0m'+"Correlation: ", correlation, "\nP-value: ", pvalue)
+    print('\n\033[4m' + "Point-Biserial Correlation Test:\n\n" + '\033[0m' + "Correlation: ", correlation, "\nP-value: ", pvalue)
     
     return
 

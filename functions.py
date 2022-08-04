@@ -49,13 +49,13 @@ def normal_shapiro(data, column, bins):
         Results of the Shapiro Wilk test
     """
     # histogram for given sample
-    fig = px.histogram(data, x = column, nbins = bins, title = "Histogram for '"+ column + "'")
-    fig.update_layout(bargap=0.2)
+    fig = px.histogram(data, x = column, nbins = bins, title = "Histogram for '" + column + "'")
+    fig.update_layout(bargap = 0.2)
     fig.show()
     
     # shapiro wilk test 
     statistic, pvalue = stats.shapiro(data[column])
-    print('\n\033[4m' + "Shapiro-Wilk Test:\n\n" + '\033[0m'+"Statistic: ", statistic, "\nP-value: ", pvalue)
+    print('\n\033[4m' + "Shapiro-Wilk Test:\n\n" + '\033[0m' + "Statistic: ", statistic, "\nP-value: ", pvalue)
     
     return
 
@@ -108,7 +108,7 @@ def ind_histograms():
     x5 = df2["religious assessment"].dropna().to_numpy()
     
     # set figure and add each histogram
-    fig, ax = plt.subplots(2, 3, figsize=(10,7))
+    fig, ax = plt.subplots(2, 3, figsize = (10,7))
     fig.suptitle("Histogram for each individual variable", fontsize=20)
     
     ax[0,0].hist(x1)
@@ -119,18 +119,18 @@ def ind_histograms():
     ax[0,1].set_title("Sex")
     ax[0,1].set_ylabel("counts")
     
-    ax[0,2].hist(x3, bins = 30, rwidth=0.7)
+    ax[0,2].hist(x3, bins = 30, rwidth = 0.7)
     ax[0,2].set_title("Age")
     ax[0,2].set_ylabel("counts")
     
-    ax[1,0].hist(x4, rwidth=0.7)
+    ax[1,0].hist(x4, rwidth = 0.7)
     ax[1,0].set_title("Denomination")
-    ax[1,0].tick_params(axis='x', labelrotation = 90)
+    ax[1,0].tick_params(axis ='x', labelrotation = 90)
     ax[1,0].set_ylabel("counts")
     
     ax[1,1].hist(x5, rwidth=0.7)
     ax[1,1].set_title("Religious Assessment")
-    ax[1,1].tick_params(axis='x', labelrotation = 90)
+    ax[1,1].tick_params(axis = 'x', labelrotation = 90)
     ax[1,1].set_ylabel("counts")
     
     fig.delaxes(ax[1][2])
@@ -198,7 +198,7 @@ def rosner_test(arrayy, arrayx):
         std = np.std(arrayy)
         mean = np.mean(arrayy)
         
-        z_values = abs(arrayy-mean)/std
+        z_values = abs(arrayy-mean) / std
         z_max = max(z_values)
         z_max_index = z_values.argmax()
         

@@ -64,7 +64,8 @@ def abortion_rel():
     summary_df = pd.DataFrame(zipped, columns = ["Religiousness", "Mean Response", "Max Response"])
     print("\n\033[4mSummary:\033[0m\n\n",summary_df)
 
-    # scatter plot with connections between points for response to abortion in percentage 
+    # line plot for response to abortion in percentage 
+    
     plot = go.Figure(data=[go.Scatter(
         name ='Religious',
         x = values,
@@ -78,35 +79,43 @@ def abortion_rel():
     )
     ])
     
-    plot.update_xaxes(dtick=values)
-    plot.update_xaxes(title="Response to abortion in numeric values")
-    plot.update_yaxes(title="Percentage")
+    plot.update_layout(
+        xaxis = dict(
+            tickmode = 'array',
+            tickvals = values,
+            ticktext = ["always bad", "nearly always bad", "only sometimes bad", "never bad"],
+            title = "Response to abortion"
+        ),
+        yaxis = dict(
+            title = "Percentage"
+        )
+    )
     
     # add buttons to decide what graph should be displayed (both, religious response, not religious response)
     plot.update_layout(
-        updatemenus=[
+        updatemenus = [
             
             dict(
-                type="buttons",
-                direction="left",
-                buttons=list([
+                type = "buttons",
+                direction = "left",
+                buttons = list([
                     
-                    dict(label="Both",
-                         method="update",
-                         args=[{"visible": [True, True]},
+                    dict(label = "Both",
+                         method = "update",
+                         args = [{"visible": [True, True]},
                                {"title": "Both Religious assessment types and their response to abortion",
                                }]),
                                
                     
-                    dict(label="Religious",
-                         method="update",
-                         args=[{"visible": [True, False]},
+                    dict(label = "Religious",
+                         method = "update",
+                         args = [{"visible": [True, False]},
                                {"title": "Religious self assessment and response to abortion",
                                 }]),
                     
-                    dict(label="Not Religious",
-                         method="update",
-                         args=[{"visible": [False, True]},
+                    dict(label = "Not Religious",
+                         method = "update",
+                         args = [{"visible": [False, True]},
                                {"title": "Not Religious self assessment and response to abortion",
                                 }]),
                 ]),
@@ -123,7 +132,7 @@ def abortion_rel():
     
     correlation, pvalue = stats.pointbiserialr(rel_bool, response_arr)
     
-    print('\n\033[4m' + "Point-Biserial Correlation Test:\n\n" + '\033[0m'+"Correlation: ", correlation, "\nP-value: ", pvalue)
+    print('\n\033[4m' + "Point-Biserial Correlation Test:\n\n" + '\033[0m' + "Correlation: ", correlation, "\nP-value: ", pvalue)
     
     return
 

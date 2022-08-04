@@ -48,14 +48,14 @@ def abortion_age():
         m = 0
         for i,val in enumerate(ages):
             if val == element:
-                inter += values[i]*counts[i]
+                inter += values[i] * counts[i]
                 counter += counts[i]
                 
                 if counts[i] > mval:
                     mval = counts[i]
                     m = values[i]
                 
-        mean_values.append(inter/counter)
+        mean_values.append(inter / counter)
         max_values.append(m)
     
     # use rosner test in case there are outliers in mean response values
@@ -102,7 +102,7 @@ def abortion_age():
     response_arr = abag_df["response to abortion"].to_numpy()
     
     correlation, pvalue = stats.kendalltau(age_arr, response_arr)
-    print('\n\033[4m' + "Kendall's Tau Correlation Test:\n\n" + '\033[0m'+"Correlation: ", correlation, "\nP-value: ", pvalue)
+    print('\n\033[4m' + "Kendall's Tau Correlation Test:\n\n" + '\033[0m' + "Correlation: ", correlation, "\nP-value: ", pvalue)
 
     
     return
